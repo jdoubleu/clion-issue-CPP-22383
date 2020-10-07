@@ -15,4 +15,7 @@ else()
     message(WARNING "Toolchain file path is NOT absolute")
 endif()
 
+include(Workaround.cmake)
+message(STATUS "CMAKE_TOOLCHAIN_FILE_FIX=${CMAKE_TOOLCHAIN_FILE_FIX}")
+
 add_executable(cmake_toolchain_var_bug main.cpp)
